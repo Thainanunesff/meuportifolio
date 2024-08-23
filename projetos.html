@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thainá Nunes</title>
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    background-color:  #000;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.header {
+    margin-bottom: 30px;
+    text-align: center;
+    margin-top: 70px; /* Adiciona espaçamento superior */
+}
+
+.h1 {
+    font-size: 36px;
+    color: #f8f8f8;
+}
+
+.header h1 {
+    font-size: 36px;
+    color: #fac1d4;;
+    top: 200px;
+    text-align: center;
+}
+
+.header h3 {
+    font-size: 19px;
+    color: #f8f8f8;
+    font-weight: initial;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: auto;
+    max-width: 1200px;
+}
+
+.box {
+    background-color: #000;
+    border-radius: 7px;
+    border: 1px solid #a7a7a7;
+    padding: 50px;
+    transition: transform 0.2s;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+}
+
+.box-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-header h2 {
+    color: #cbf384;
+    margin: 0;
+    font-size: 20px;
+}
+
+.box-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+p {
+    color: #666;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+  /* Estilização do header */
+  header {
+            background-color: #000;
+            width: 100%;
+            padding: 30px;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #ecd4e0;
+            left: 0;
+            bottom: -5px;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+       
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Início</a></li>
+                <li><a href="sobremim.html">Sobre Mim</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="tecnologias.html">Tecnologias</a></li>
+                <li><a href="falecomigo.html">Fale Comigo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="header">
+        <h1>Meus Projetos</h1>
+        <h3>Estes são meus projetos e as principais tecnologias que eu utilizei.</h3>
+    </div>
+
+    
+    <div class="container">
+        <div class="box">
+            <div class="box-header">
+                <h2>Conversor de temperatura</h2>
+                <img src="temperature-free-icon-temperature-icon-free-11553469636smayyrvo21.png" alt="temperatura">
+            </div>
+            <p>Usei as tecnologias: Html, Css e JavaScript</p>
+            <li><a href="conversortemperatura.html">Veja meu projeto</a></li>
+            <li><a href="https://github.com/Thainanunesff/meuportifolio/blob/ec35ba298baadd1a263a5e0b9ea8b4709a0938bf/conversortemperatura">GItHub</a></li>
+        </div>
+        <div class="box">
+            <div class="box-header">
+                <h2>To do list</h2>
+                <img src="Icone-lista-Png.webp" alt="todolist">
+            </div>
+            <p>Usei as tecnologias: Html, Css e JavaScript.</p>
+            <li><a href="projetotodolist.html">Veja meu projeto</a></li>
+            <li><a href="https://github.com/Thainanunesff/meuportifolio/blob/ec35ba298baadd1a263a5e0b9ea8b4709a0938bf/projetotodolist">GitHub</a></li>
+        </div>
+        <div class="box">
+            <div class="box-header">
+                <h2>Relógio</h2>
+                <img src="Icone-relogio-Png-1024x1024.webp" alt="relogio">
+            </div>
+            <p>Usei as tecnologias: Html, Css e JavaScript.</p>
+            <li><a href="relogio.html">Veja meu projeto</a></li>
+            <li><a href="https://github.com/Thainanunesff/meuportifolio/blob/ec35ba298baadd1a263a5e0b9ea8b4709a0938bf/relogio">GitHub</a></li>
+        </div>
+    </div>
+</body>
+</html>

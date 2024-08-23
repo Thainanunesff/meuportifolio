@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thainá</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif; }
+ 
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh; 
+            position: relative;
+            background-image: url('Design_sem_nome__1_-removebg-preview.png');
+            background-repeat: no-repeat;
+            background-size: 50%; 
+            background-position: bottom left -30px; 
+            background-color: #fac1d4;
+        }
+
+        header {
+            background-color: #fac1d4;
+            padding: 20px;
+        }
+
+        h1 { font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+           color: #fff;
+
+        }
+
+        p {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 44pt;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #98dd78;
+            left: 0;
+            bottom: -5px;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .container {
+        display: flex;
+        width: 80%;
+        max-width: 1200px;
+        background-color: #b6adff;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 100px auto; 
+        }
+
+        .promo-section {
+            padding: 50px;
+            width: 50%;
+            background-color: #fac1d4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .text-content h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .text-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .cta-button {
+            padding: 12px 30px;
+            background-color: #98dd78;
+            color: #fff;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+            font-weight: 700;
+        }
+
+        .cta-button-secondary {
+            padding: 12px 30px;
+            background-color: transparent;
+            color: #333;
+            border: 2px solid #333;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+            font-weight: 700;
+        }
+
+        .cta-button:hover,
+        .cta-button-secondary:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .image-section {
+            width: 50%;
+            background-color: #fac1d4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            right: 70px;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Estiliza a barra de rolagem no navegador  */
+        ::-webkit-scrollbar {
+            width: 12px; 
+            height: 12px; 
+        }
+
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px; 
+        }
+
+       
+        ::-webkit-scrollbar-thumb {
+            background: #fac1d4; 
+            border-radius: 10px; 
+        }
+
+        /* Estiliza o "polegar" da barra de rolagem quando o mouse está sobre ele */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #fac1d4; 
+        }
+
+        ::selection {
+            background-color: #cbf384;
+            color: black;
+
+            
+
+    </style>
+</head>
+<body>
+    <div class="background-box">
+        </div>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Início</a></li>
+                <li><a href="sobremim.html">Sobre Mim</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="tecnologias.html">Tecnologias</a></li>
+                <li><a href="falecomigo.html">Fale Comigo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="promo-section">
+            <div class="text-content">
+                <h1>Seja bem vindo!</h1>
+                <p>Estou super empolgado por você estar aqui! </br><strong>Prepare-se para explorar meus projetos e ver do que sou capaz. Vamos embarcar nessa jornada juntos!</strong></p>
+                <div class="cta-buttons">
+                    <a href="#" class="cta-button">Linkedin</a>
+                    <a href="#" class="cta-button-secondary">GItHub</a>
+                </div>
+            </div>
+        </div>
+        <div class="image-section">
+            <img src="original-17c8fd277bfe3aa5cc74d8c137ffe1e4-removebg.png" alt="Image">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const ctaButtons = document.querySelectorAll('.cta-button, .cta-button-secondary');
+            
+            ctaButtons.forEach(button => {
+                button.addEventListener('mouseover', function() {
+                    this.style.transform = 'scale(1.05)';
+                    this.style.boxShadow = '0 8px 16px rgba(0, 0, 0, 0.2)';
+                });
+                button.addEventListener('mouseout', function() {
+                    this.style.transform = 'scale(1)';
+                    this.style.boxShadow = 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

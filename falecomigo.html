@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa de Mensagem</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilo do corpo e container */
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #000;
+            margin: 0;
+            padding-top: 80px; /* Espaço para o menu */
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 30px;
+            background-color: transparent;
+            border-radius: 5px;
+        }
+
+        h1 {
+            color: #baea7c;
+            font-size: 38px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        p {
+            color: #777777;
+            font-size: 18px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            flex: 1;
+            margin-right: 50px;
+            text-align: left;
+        }
+
+        .form-group:last-child {
+            margin-right: 0;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            border: none;
+            border-bottom: 2px solid #ddd;
+            background-color: transparent;
+            outline: none;
+            transition: border-color 0.3s;
+            text-align: left;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #eaeaea;
+            text-align: left;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #fac1d4;
+            text-color: #fff;
+        }
+
+        .form-group textarea {
+            margin-bottom: 40px;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #dd7f9f;
+            color: #fff;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color:#a1d45f;
+        }
+
+        /* Estilo do menu */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: transparent;
+            padding: 30px;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fac1d4;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #ecd4e0;
+            left: 0;
+            bottom: -5px;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* Estilo do scroll */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f4f4f4;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #CD5C5C;
+            border-radius: 5px;
+            border: 2px solid #f4f4f4;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Menu de navegação -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Início</a></li>
+                <li><a href="sobremim.html">Sobre Mim</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="tecnologias.html">Tecnologias</a></li>
+                <li><a href="falecomigo.html">Fale Comigo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção de formulário -->
+    <div class="container">
+        <h1>Envie-me uma mensagem!</h1>
+        <p>Tem uma pergunta ou proposta, ou apenas quer dizer olá? Fique à vontade.</p>
+        <form action="#" method="post">
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Seu Nome" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Endereço de Email" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <textarea id="message" name="message" rows="5" placeholder="Sua Mensagem" required></textarea>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
