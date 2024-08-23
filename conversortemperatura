@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .converter-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="converter-container">
+        <h2>Conversor de Temperatura</h2>
+        <input type="number" id="inputTemp" placeholder="Insira a temperatura">
+        <select id="scale">
+            <option value="celsius">Celsius para Fahrenheit</option>
+            <option value="fahrenheit">Fahrenheit para Celsius</option>
+        </select>
+        <button onclick="convert()">Converter</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        function convert() {
+            const temp = parseFloat(document.getElementById('inputTemp').value);
+            const scale = document.getElementById('scale').value;
+            let result;
+
+            if (isNaN(temp)) {
+                result = "Por favor, insira um número válido.";
+            } else if (scale === 'celsius') {
+                result = (temp * 9/5) + 32 + ' °F';
+            } else {
+                result = (temp - 32) * 5/9 + ' °C';
+            }
+
+            document.getElementById('result').textContent = result;
+        }
+    </script>
+</body>
+</html>
